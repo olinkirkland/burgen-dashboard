@@ -1,0 +1,90 @@
+@import 'reset';
+@import 'colors';
+@import 'util';
+
+button.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  font-size: 1.2rem;
+  gap: 0.4rem;
+  align-items: center;
+  background-color: $shade-light;
+
+  padding: 0.4rem 0.8rem;
+
+  &disabled {
+    cursor: not-allowed;
+  }
+
+  i,
+  span {
+    color: $light;
+  }
+
+  &.btn-sidebar {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    gap: 0.8rem;
+    &.btn--active {
+      background-color: $shade-light;
+    }
+  }
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .app__header {
+    padding: 1.6rem;
+    display: flex;
+    background-color: $dark;
+    border-bottom: 1px solid $shade-light;
+
+    h1 {
+      color: $light;
+    }
+  }
+
+  .app__content {
+    flex: 1;
+    display: flex;
+    background-color: $dark;
+    .app__content__sidebar {
+      background-color: $shade-light;
+      padding: 0.8rem;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+
+    .app__content__main {
+      flex: 1;
+    }
+  }
+}
+
+.data-module {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .data-module__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .data-module__content {
+    margin: 0 1.2rem 1.2rem 1.2rem;
+    border: 1px solid $light;
+    flex: 1;
+  }
+}
